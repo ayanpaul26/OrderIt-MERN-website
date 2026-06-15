@@ -1,3 +1,3 @@
-config.env
-node_modules
-# dfghjkl
+node_modules/
+config/config.env
+.env
