@@ -12,10 +12,15 @@
 const express = require("express");
 
 const app = express();
+const auth = require("./routes/auth")
 
 const cors = require("cors");
 
 app.use(cors()); // to apply middileware
 app.use(express.json()); //it allows the server to read the json data send by the client ,so if i delete it then server cant read json req body.
+
+app.use("/api/v1/users",auth)
+
+
 
 module.exports = app;
